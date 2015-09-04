@@ -1,0 +1,13 @@
+---
+- name: Install miscellaneous packages.
+  apt: name={{item}} state=latest update_cache=yes
+  with_items:
+    - vim-nox
+    - irssi
+    - tmux
+    - screen
+    - keychain
+    - lynx
+    - wget
+    - curl
+    - subversion
