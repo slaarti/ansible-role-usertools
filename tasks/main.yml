@@ -1,14 +1,4 @@
 ---
 - name: Install miscellaneous packages.
   apt: name={{item}} state=latest update_cache=yes default_release="{{ansible_distribution_release}}-backports"
-  with_items:
-    - vim-nox
-    - irssi
-    - tmux
-    - screen
-    - keychain
-    - lynx
-    - wget
-    - curl
-    - subversion
-    - ack-grep
+  with_items: "{{ usertools_packages }}"
